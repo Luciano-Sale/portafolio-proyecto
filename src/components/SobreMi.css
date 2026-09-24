@@ -1,0 +1,35 @@
+.sobre-mi {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--fondo-principal);
+}
+
+.sobre-mi h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--texto-principal);
+}
+
+.sobre-mi p {
+  color: var(--texto-secundario);
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.sobre-mi button {
+  background-color: var(--acento);
+  color: var(--fondo-principal);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.sobre-mi button:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}

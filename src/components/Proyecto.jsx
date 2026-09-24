@@ -1,7 +1,9 @@
+import './Proyecto.css';
 
-const Proyecto = ({titulo, descripcion}) => {
+const Proyecto = ({ titulo, descripcion }) => {
   return (
-    <div>
+    <div className="proyecto">
+      <div className="proyecto-icono">💻</div>
       <h3>{titulo}</h3>
       <p>{descripcion}</p>
     </div>

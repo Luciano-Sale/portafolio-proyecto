@@ -1,7 +1,9 @@
+import './Footer.css';
+
 const Footer = () => {
   return (
-    <footer>
-      <p>Contacto: luciano@ejemplo.com</p>
+    <footer className="footer">
+      <p>Contacto: luchosale96@gmail.com</p>
       <p>© 2026 Luciano Sale</p>
     </footer>
   )

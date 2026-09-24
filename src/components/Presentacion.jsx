@@ -1,9 +1,12 @@
+import './Presentacion.css';
+
 const Presentacion = () => {
-    return (
-        <>
-            <h2>Luciano Sale - Estudiante de Programación </h2>
-            <p>Tengo 22 años, estoy cursando el segundo año de la carrera de Programacion en la Universidad Tecnologica Nacional</p>
-           </>
-    )
+  return (
+    <section className="presentacion">
+      <h2>Luciano Sale - Estudiante de Programación</h2>
+      <p>  Estudiante de Programación en la UTN, aprendiendo React y armando
+        proyectos para entender cómo funciona todo de principio a fin.</p>
+    </section>
+  )
 }
 export default Presentacion

@@ -1,20 +1,27 @@
 .proyectos {
-  padding: 60px 20px;
+  padding: 60px 24px;
   text-align: center;
-  background-color: var(--fondo-principal);
 }
 
 .proyectos h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: var(--texto-principal);
+  font-size: 1.8rem;
+  margin: 0 0 28px;
+}
+
+.proyectos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
 .proyectos-lista {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
   max-width: 900px;
   margin: 0 auto;
 }

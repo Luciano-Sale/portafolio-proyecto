@@ -1,32 +1,33 @@
 .proyecto {
-  background-color: var(--fondo-secundario);
+  background-color: var(--fondo-card);
   border: 1px solid var(--borde);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 24px;
-  max-width: 280px;
+  text-align: left;
+  width: 260px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .proyecto:hover {
   transform: translateY(-6px);
   border-color: var(--acento);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
 }
 
 .proyecto-icono {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .proyecto h3 {
   color: var(--acento);
   margin: 0 0 8px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .proyecto p {
   color: var(--texto-secundario);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.4;
   margin: 0;
 }

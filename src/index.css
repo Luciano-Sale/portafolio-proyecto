@@ -1,6 +1,7 @@
 :root {
   --fondo-principal: #1a1614;
-  --fondo-secundario: #262220;
+  --fondo-secundario: #221d1a;
+  --fondo-card: #2a2420;
   --texto-principal: #f0ece7;
   --texto-secundario: #a89f96;
   --acento: #d97757;
@@ -14,8 +15,9 @@
 body {
   background-color: var(--fondo-principal);
   color: var(--texto-principal);
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   margin: 0;
+  line-height: 1.5;
 }
 
 section {

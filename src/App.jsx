@@ -5,6 +5,7 @@ import Proyectos from './components/Proyectos'
 import Footer from './components/Footer'
 import { SobreMi } from './components/SobreMi'
 import { useState } from "react"
+import Contacto from './components/Contacto'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Proyectos />
       <SobreMi />
       <Footer />
+      <Contacto/>
       
     </>
   )

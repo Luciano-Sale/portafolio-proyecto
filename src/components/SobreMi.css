@@ -1,21 +1,19 @@
 .sobre-mi {
-  padding: 60px 20px;
+  padding: 50px 24px;
+  background-color: var(--fondo-secundario);
   text-align: center;
-  background-color: var(--fondo-principal);
 }
 
 .sobre-mi h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--texto-principal);
+  font-size: 1.7rem;
+  margin: 0 0 20px;
 }
 
 .sobre-mi p {
   color: var(--texto-secundario);
   max-width: 600px;
   margin: 0 auto 20px;
-  line-height: 1.5;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .sobre-mi button {
@@ -24,7 +22,7 @@
   border: none;
   padding: 10px 24px;
   border-radius: 6px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;

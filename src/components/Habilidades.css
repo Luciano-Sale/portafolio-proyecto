@@ -1,39 +1,74 @@
 .habilidades {
-  padding: 60px 20px;
+  padding: 60px 24px;
   text-align: center;
-  background-color: var(--fondo-secundario);
-}
-
-.habilidades h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: var(--texto-principal);
-}
-
-.habilidades ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 0;
   max-width: 700px;
   margin: 0 auto;
 }
 
-.habilidades li {
-  background-color: var(--fondo-principal);
-  color: var(--acento);
+.habilidades h2 {
+  font-size: 1.8rem;
+  margin: 0 0 30px;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.habilidad-card {
+  background-color: var(--fondo-card);
   border: 1px solid var(--borde);
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 10px;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   cursor: default;
 }
 
-.habilidades li:hover {
-  transform: scale(1.1);
+.habilidad-card:hover {
+  transform: translateY(-4px);
   background-color: var(--acento);
+  border-color: var(--acento);
+}
+
+.habilidad-card:hover i,
+.habilidad-card:hover span {
   color: var(--fondo-principal);
+}
+
+.habilidad-card i {
+  font-size: 1.8rem;
+  color: var(--acento);
+  transition: color 0.2s ease;
+}
+
+.habilidad-card span {
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  transition: color 0.2s ease;
+} 
+
+.habilidades-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.habilidad-card {
+  width: 130px;
+  background-color: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  cursor: default;
 }

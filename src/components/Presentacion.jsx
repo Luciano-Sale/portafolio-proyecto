@@ -1,13 +1,19 @@
 import './Presentacion.css';
-import Foto from '../components/233195535.png'
+import fotoLuciano from './233195535.png';
+
 const Presentacion = () => {
   return (
     <section className="presentacion">
-      <h2>Luciano Sale - Estudiante de Programación</h2>
-      <img src={Foto} alt="Luciano Sale" />
-      <p>  Estudiante de Programación en la UTN, aprendiendo React y armando
-        proyectos para entender cómo funciona todo de principio a fin.</p>
+      <div className="presentacion-texto">
+        <h2>Hola, soy Luciano.<br/>Estudiante de Programación</h2>
+        <p>
+          Aprendiendo React y armando proyectos para entender cómo funciona
+          todo de principio a fin.
+        </p>
+      </div>
+      <img src={fotoLuciano} alt="Luciano Sale" className="presentacion-img" />
     </section>
   )
 }
+
 export default Presentacion

@@ -1,4 +1,4 @@
-import './Proyecto.css';
+import "./styles/Proyecto.css";
 
 const Proyecto = ({ titulo, descripcion }) => {
   return (

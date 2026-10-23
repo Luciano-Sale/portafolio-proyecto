@@ -1,0 +1,294 @@
+/* ==============================
+   SECCIÓN HABILIDADES
+============================== */
+
+.habilidades {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 65px 45px;
+  color: #f5f3ff;
+
+  animation: habilidadesEntrada 0.65s ease both;
+}
+
+@keyframes habilidadesEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.habilidades h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 0 48px;
+
+  color: #f5f3ff;
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.habilidades h2::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+
+  width: 55px;
+  height: 3px;
+
+  background: #a78bfa;
+  border-radius: 10px;
+
+  transition: width 0.35s ease;
+}
+
+.habilidades h2:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   GRILLA
+============================== */
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* ==============================
+   TARJETAS
+============================== */
+
+.habilidad-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+
+  min-width: 0;
+  min-height: 155px;
+  padding: 25px;
+
+  background: #15151f;
+  border: 1px solid #2b2b39;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation: tarjetaEntrada 0.5s ease both;
+}
+
+/* Entrada escalonada */
+.habilidad-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.habilidad-card:nth-child(2) {
+  animation-delay: 0.10s;
+}
+
+.habilidad-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.habilidad-card:nth-child(4) {
+  animation-delay: 0.20s;
+}
+
+.habilidad-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.habilidad-card:nth-child(6) {
+  animation-delay: 0.30s;
+}
+
+@keyframes tarjetaEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Línea superior animada */
+.habilidad-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 65%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #a78bfa,
+    transparent
+  );
+
+  transition: left 0.55s ease;
+}
+
+/* ==============================
+   ICONOS
+============================== */
+
+.habilidad-card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  color: #b9a4ff;
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.16);
+  border-radius: 11px;
+
+  font-size: 1.45rem;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==============================
+   NOMBRE DE TECNOLOGÍA
+============================== */
+
+.habilidad-card span {
+  color: #e8e6f0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+
+  transition: color 0.3s ease;
+}
+
+/* ==============================
+   HOVER
+============================== */
+
+.habilidad-card:hover {
+  transform: translateY(-5px);
+
+  background: #1a1926;
+  border-color: #7863b5;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.habilidad-card:hover::before {
+  left: 130%;
+}
+
+.habilidad-card:hover i {
+  color: #d5c7ff;
+  background: rgba(167, 139, 250, 0.16);
+  transform: translateY(-2px);
+}
+
+.habilidad-card:hover span {
+  color: #c4b5fd;
+}
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media (max-width: 900px) {
+  .habilidades {
+    padding: 50px 30px;
+  }
+
+  .habilidades-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 550px) {
+  .habilidades {
+    padding: 35px 20px;
+  }
+
+  .habilidades h2 {
+    font-size: 2.3rem;
+    margin-bottom: 38px;
+  }
+
+  .habilidades-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .habilidad-card {
+    min-height: 135px;
+    padding: 18px;
+    gap: 20px;
+  }
+
+  .habilidad-card i {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .habilidad-card span {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==============================
+   ACCESIBILIDAD
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .habilidades,
+  .habilidad-card,
+  .habilidad-card::before,
+  .habilidad-card i,
+  .habilidad-card span,
+  .habilidades h2::after {
+    animation: none;
+    transition: none;
+  }
+
+  .habilidad-card:hover {
+    transform: none;
+  }
+}

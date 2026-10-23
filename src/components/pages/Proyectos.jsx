@@ -1,5 +1,5 @@
-import './Proyectos.css';
-import Proyecto from './Proyecto'
+import "../styles/Proyectos.css"
+import Proyecto from '../Proyecto'
 
 const Proyectos = () => {
   return (

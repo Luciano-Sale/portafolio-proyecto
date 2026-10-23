@@ -1,0 +1,172 @@
+.proyecto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 245px;
+  padding: 30px;
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #1b1b28, #12121a);
+  border: 1px solid #2d2b3d;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Línea decorativa superior */
+.proyecto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #a78bfa,
+    transparent
+  );
+
+  transition: left 0.6s ease;
+}
+
+/* Brillo sutil de fondo */
+.proyecto::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 170px;
+  height: 170px;
+
+  background: rgba(167, 139, 250, 0.06);
+  border-radius: 50%;
+  filter: blur(25px);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+  pointer-events: none;
+}
+
+/* Animaciones al pasar el cursor */
+.proyecto:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+  background: linear-gradient(145deg, #211d32, #15141f);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.proyecto:hover::before {
+  left: 130%;
+}
+
+.proyecto:hover::after {
+  transform: scale(1.4);
+  background: rgba(167, 139, 250, 0.12);
+}
+
+/* Ícono */
+.proyecto-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 14px;
+
+  font-size: 1.6rem;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.proyecto:hover .proyecto-icono {
+  transform: scale(1.08) rotate(-5deg);
+  background: rgba(167, 139, 250, 0.18);
+  border-color: #8b5cf6;
+}
+
+/* Título */
+.proyecto h3 {
+  margin: 4px 0 0;
+  color: #f3f0ff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+
+  transition: color 0.3s ease;
+}
+
+.proyecto:hover h3 {
+  color: #c4b5fd;
+}
+
+/* Descripción */
+.proyecto p {
+  margin: 0;
+  color: #a5a3b8;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  transition: color 0.3s ease;
+}
+
+.proyecto:hover p {
+  color: #d0cde0;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+  .proyecto {
+    min-height: auto;
+    padding: 24px;
+    gap: 13px;
+  }
+
+  .proyecto-icono {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+
+  .proyecto h3 {
+    font-size: 1.15rem;
+  }
+
+  .proyecto p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Respeta la preferencia de reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .proyecto,
+  .proyecto::before,
+  .proyecto::after,
+  .proyecto-icono,
+  .proyecto h3,
+  .proyecto p {
+    transition: none;
+  }
+
+  .proyecto:hover {
+    transform: none;
+  }
+}

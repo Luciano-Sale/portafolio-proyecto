@@ -1,5 +1,5 @@
-import './Presentacion.css';
-import fotoLuciano from './233195535.png';
+import "../styles/Presentacion.css"
+import fotoLuciano from "../styles/233195535.png";
 
 const Presentacion = () => {
   return (
